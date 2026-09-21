@@ -1,7 +1,7 @@
 url: https://www.rawlyapp.com.br/api/status/chamada
-status: down
-code: 401
-responseTime: 808
-lastUpdated: 2026-09-21T15:21:44.349Z
+status: up
+code: 200
+responseTime: 482
+lastUpdated: 2026-09-21T15:30:28.943Z
 startTime: 2026-09-21T15:21:30.809Z
 generator: Upptime <https://github.com/upptime/upptime>

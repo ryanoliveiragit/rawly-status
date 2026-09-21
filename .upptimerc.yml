@@ -86,6 +86,26 @@ i18n:
   loading: Carregando
   navGitHub: GitHub
   footer: Esta página é [aberta]($REPO) e roda no [Upptime](https://upptime.js.org)
+  rateLimitExceededTitle: Limite do GitHub atingido
+  rateLimitExceededIntro: Esta página lê o estado dos serviços pela API do GitHub, e você passou do número de consultas que ela permite por hora neste endereço de internet. Espere um pouco e recarregue.
+  rateLimitExceededWhatDoesErrorMean: O que isso quer dizer?
+  rateLimitExceededErrorMeaning: A página busca os dados ao vivo no GitHub. Sem identificação, o GitHub libera 60 consultas por hora para cada endereço de internet, e elas acabaram.
+  rateLimitExceededErrorHowCanFix: Como resolver?
+  rateLimitExceededErrorFix: Espere uma hora e o limite volta sozinho. Se precisar agora, cole um token pessoal do GitHub abaixo: com ele são 5.000 consultas por hora.
+  rateLimitExceededGeneratePAT: Como gerar um token pessoal
+  rateLimitExceededHasSet: Você já tem um token guardado neste navegador.
+  rateLimitExceededRemoveToken: Remover o token
+  rateLimitExceededGitHubPAT: Token pessoal do GitHub
+  rateLimitExceededCopyPastePAT: Cole o seu token aqui
+  rateLimitExceededSaveToken: Guardar o token
+  errorTitle: Deu algo errado
+  errorIntro: Não deu para buscar o estado dos serviços agora.
+  errorText: Tente de novo em alguns instantes.
+  errorHome: Voltar para o começo
+  pastScheduledMaintenance: Manutenções passadas
+  scheduledMaintenance: Manutenção programada
+  scheduledMaintenanceSummaryStarted: Começou em $DATE, por $DURATION minutos
+  scheduledMaintenanceSummaryStarts: Começa em $DATE, por $DURATION minutos
   startedAt: Começou em
   startsAt: Começa em
   duration: Duração

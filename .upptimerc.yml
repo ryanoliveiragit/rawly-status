@@ -1,31 +1,78 @@
-# Change these first
-owner: upptime # Your GitHub organization or username, where this repository lives
-repo: upptime # The name of this repository
+owner: ryanoliveiragit
+repo: rawly-status
 
+# Cada serviço do Rawly tem um endereço só dele em `/api/status/<alvo>`, que fala
+# com o serviço de verdade e responde 503 quando ele está fora. O cabeçalho leva o
+# `STATUS_TOKEN` (segredo deste repositório): sem ele a rota nem existe.
 sites:
-  - name: Google
-    url: https://www.google.com
-  - name: Wikipedia
-    url: https://en.wikipedia.org
-  - name: Hacker News
-    url: https://news.ycombinator.com
-  - name: Secret Site
-    url: $SECRET_SITE
+  - name: Aplicativo
+    url: https://www.rawlyapp.com.br/api/status/app
+    headers:
+      - "Authorization: Bearer $STATUS_TOKEN"
+  - name: Banco de dados
+    url: https://www.rawlyapp.com.br/api/status/banco
+    headers:
+      - "Authorization: Bearer $STATUS_TOKEN"
+  - name: Entrar na conta
+    url: https://www.rawlyapp.com.br/api/status/login
+    headers:
+      - "Authorization: Bearer $STATUS_TOKEN"
+  - name: Mensagens em tempo real
+    url: https://www.rawlyapp.com.br/api/status/tempo-real
+    headers:
+      - "Authorization: Bearer $STATUS_TOKEN"
+  - name: Chamadas de voz e tela
+    url: https://www.rawlyapp.com.br/api/status/chamada
+    headers:
+      - "Authorization: Bearer $STATUS_TOKEN"
+  - name: Materiais e anexos
+    url: https://www.rawlyapp.com.br/api/status/arquivos
+    headers:
+      - "Authorization: Bearer $STATUS_TOKEN"
+  - name: Assinatura e pagamento
+    url: https://www.rawlyapp.com.br/api/status/pagamento
+    headers:
+      - "Authorization: Bearer $STATUS_TOKEN"
+  - name: Resumos e transcrição por IA
+    url: https://www.rawlyapp.com.br/api/status/ia
+    headers:
+      - "Authorization: Bearer $STATUS_TOKEN"
+  - name: Site público
+    url: https://www.rawlyapp.com.br/planos
+  - name: Painel de gestão
+    url: https://rawly-gestao.vercel.app/login
 
 status-website:
-  # Add your custom domain name, or remove the `cname` line if you don't have a domain
-  # Uncomment the `baseUrl` line if you don't have a custom domain and add your repo name there
-  cname: demo.upptime.js.org
-  # baseUrl: /your-repo-name
-  logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
-  name: Upptime
-  introTitle: "**Upptime** is the open-source uptime monitor and status page, powered entirely by GitHub."
-  introMessage: This is a sample status page which uses **real-time** data from our [GitHub repository](https://github.com/upptime/upptime). No server required — just GitHub Actions, Issues, and Pages. [**Get your own for free**](https://github.com/upptime/upptime)
+  baseUrl: /rawly-status
+  name: Status do Rawly
+  introTitle: "Estado dos serviços do **Rawly**"
+  introMessage: Cada serviço é medido de 5 em 5 minutos, de fora, por um robô que roda no GitHub. Quando algo cai, aparece aqui antes de alguém precisar perguntar.
   navbar:
     - title: Status
       href: /
-    - title: GitHub
-      href: https://github.com/$OWNER/$REPO
+    - title: Abrir o Rawly
+      href: https://www.rawlyapp.com.br
 
-# Upptime also supports notifications, assigning issues, and more
-# See https://upptime.js.org/docs/configuration
+# Em português, como o resto do produto.
+i18n:
+  activeIncidents: Incidentes abertos
+  allSystemsOperational: Todos os serviços no ar
+  incidentReport: "Relatório #$NUMBER:"
+  activeIncidentSummary: "Aberto $TIME atrás"
+  incidentTitle: Incidentes passados
+  incidentFixed: resolvido
+  incidentOngoing: em andamento
+  liveStatus: Estado agora
+  overallUptime: "Disponibilidade geral: $UPTIME"
+  averageResponseTime: "Resposta média: $RESPONSE_TIME ms"
+  sevenDayResponseTime: Resposta em 7 dias
+  down: fora do ar
+  up: no ar
+  degraded: lento
+  pastIncidents: Incidentes passados
+  responseTime: Tempo de resposta
+  uptime: Disponibilidade
+  uptimeDay: 24 horas
+  uptimeWeek: 7 dias
+  uptimeMonth: 30 dias
+  uptimeYear: 1 ano

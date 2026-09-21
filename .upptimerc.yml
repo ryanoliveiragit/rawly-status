@@ -53,26 +53,47 @@ status-website:
     - title: Abrir o Rawly
       href: https://www.rawlyapp.com.br
 
-# Em português, como o resto do produto.
+# Em português, como o resto do produto. As chaves são as de
+# upptime/status-page/i18n.yml — nome errado aqui vira "$VARIAVEL" na tela.
 i18n:
-  activeIncidents: Incidentes abertos
+  locale: pt-BR
+  activeIncidents: Acontecendo agora
   allSystemsOperational: Todos os serviços no ar
-  incidentReport: "Relatório #$NUMBER:"
-  activeIncidentSummary: "Aberto $TIME atrás"
-  incidentTitle: Incidentes passados
-  incidentFixed: resolvido
-  incidentOngoing: em andamento
-  liveStatus: Estado agora
-  overallUptime: "Disponibilidade geral: $UPTIME"
-  averageResponseTime: "Resposta média: $RESPONSE_TIME ms"
-  sevenDayResponseTime: Resposta em 7 dias
-  down: fora do ar
-  up: no ar
-  degraded: lento
+  incidentReport: "Incidente #$NUMBER →"
+  activeIncidentSummary: Aberto em $DATE, com $POSTS atualizações
+  incidentTitle: Incidente $NUMBER
+  incidentDetails: O que aconteceu
+  incidentFixed: Resolvido
+  incidentOngoing: Em andamento
+  incidentOpenedAt: Começou em
+  incidentClosedAt: Terminou em
+  incidentViewOnGitHub: Ver e acompanhar no GitHub
+  incidentCommentSummary: Escrito em $DATE por $AUTHOR
+  incidentBack: ← Voltar para os incidentes
   pastIncidents: Incidentes passados
-  responseTime: Tempo de resposta
-  uptime: Disponibilidade
-  uptimeDay: 24 horas
-  uptimeWeek: 7 dias
-  uptimeMonth: 30 dias
-  uptimeYear: 1 ano
+  pastIncidentsResolved: Resolvido em $MINUTES minutos, com $POSTS atualizações
+  liveStatus: Estado agora
+  overallUptime: "No ar: $UPTIME"
+  overallUptimeTitle: Tempo no ar
+  averageResponseTime: "Resposta média: $TIMEms"
+  averageResponseTimeTitle: Resposta média
+  sevelDayResponseTime: Resposta nos últimos 7 dias
+  responseTimeMs: Tempo de resposta (ms)
+  up: No ar
+  down: Fora do ar
+  degraded: Lento
+  ms: ms
+  loading: Carregando
+  navGitHub: GitHub
+  footer: Esta página é [aberta]($REPO) e roda no [Upptime](https://upptime.js.org)
+  startedAt: Começou em
+  startsAt: Começa em
+  duration: Duração
+  durationMin: $DURATION minutos
+  incidentCompleted: Concluído
+  incidentScheduled: Agendado
+  duration24H: 24h
+  duration7D: 7 dias
+  duration30D: 30 dias
+  duration1Y: 1 ano
+  durationAll: tudo

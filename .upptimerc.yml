@@ -85,13 +85,13 @@ i18n:
   ms: ms
   loading: Carregando
   navGitHub: GitHub
-  footer: Esta página é [aberta]($REPO) e roda no [Upptime](https://upptime.js.org)
+  footer: "Esta página é [aberta]($REPO) e roda no [Upptime](https://upptime.js.org)"
   rateLimitExceededTitle: Limite do GitHub atingido
   rateLimitExceededIntro: Esta página lê o estado dos serviços pela API do GitHub, e você passou do número de consultas que ela permite por hora neste endereço de internet. Espere um pouco e recarregue.
   rateLimitExceededWhatDoesErrorMean: O que isso quer dizer?
   rateLimitExceededErrorMeaning: A página busca os dados ao vivo no GitHub. Sem identificação, o GitHub libera 60 consultas por hora para cada endereço de internet, e elas acabaram.
   rateLimitExceededErrorHowCanFix: Como resolver?
-  rateLimitExceededErrorFix: Espere uma hora e o limite volta sozinho. Se precisar agora, cole um token pessoal do GitHub abaixo: com ele são 5.000 consultas por hora.
+  rateLimitExceededErrorFix: "Espere uma hora e o limite volta sozinho. Se precisar agora, cole um token pessoal do GitHub abaixo: com ele são 5.000 consultas por hora."
   rateLimitExceededGeneratePAT: Como gerar um token pessoal
   rateLimitExceededHasSet: Você já tem um token guardado neste navegador.
   rateLimitExceededRemoveToken: Remover o token

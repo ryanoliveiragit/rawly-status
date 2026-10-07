@@ -1,0 +1,47 @@
+# Saúde dos projetos: a rodada de 5 em 5 minutos (06/10/2026).
+#
+# Para pôr em github.com/ryanoliveiragit/rawly-status como
+# `.github/workflows/saude-projetos.yml` — fora dos workflows que o Upptime
+# gera (ele reescreve os dele, não este). A Vercel do Rawly é Hobby: o cron de
+# lá roda só uma vez por dia (fica de reserva, `vercel.json`), então quem mede
+# a cada poucos minutos é o GitHub Actions, como o monitor de status do Rawly.
+#
+# Precisa do secret `HEALTHCHECK_TOKEN` no repositório (Settings › Secrets and
+# variables › Actions), com o mesmo valor do `HEALTHCHECK_TOKEN` no Doppler
+# `prd` do Rawly. Sem ele no Doppler, o Rawly aceita o `STATUS_TOKEN` (o mesmo
+# do monitor): então dá para usar o secret que o Upptime já tem.
+#
+# O GitHub atrasa crons de 5 minutos quando está cheio; uma rodada que atrasa
+# só mede mais tarde, nada se perde.
+name: Saúde dos projetos
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+
+permissions: {}
+
+concurrency:
+  group: saude-projetos
+  cancel-in-progress: false
+
+jobs:
+  medir:
+    name: Medir os projetos
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Chamar a rodada do Rawly
+        env:
+          HEALTHCHECK_TOKEN: ${{ secrets.HEALTHCHECK_TOKEN || secrets.STATUS_TOKEN }}
+          RAWLY_URL: ${{ vars.RAWLY_URL || 'https://www.rawlyapp.com.br' }}
+        run: |
+          if [ -z "$HEALTHCHECK_TOKEN" ]; then
+            echo "::error::Falta o secret HEALTHCHECK_TOKEN (ou STATUS_TOKEN) neste repositório."
+            exit 1
+          fi
+          curl -fsS --retry 2 --retry-delay 10 --max-time 90 \
+            -X POST \
+            -H "Authorization: Bearer $HEALTHCHECK_TOKEN" \
+            "$RAWLY_URL/api/interno/saude"

@@ -1,7 +1,7 @@
 url: https://www.rawlyapp.com.br/api/status/login
-status: up
-code: 200
-responseTime: 764
-lastUpdated: 2026-10-19T00:52:14.359Z
+status: down
+code: 503
+responseTime: 414
+lastUpdated: 2026-10-19T23:44:32.001Z
 startTime: 2026-09-21T15:33:40.674Z
 generator: Upptime <https://github.com/upptime/upptime>

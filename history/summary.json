@@ -40,36 +40,40 @@
     "url": "https://www.rawlyapp.com.br/api/status/login",
     "icon": "https://icons.duckduckgo.com/ip3/www.rawlyapp.com.br.ico",
     "slug": "entrar-na-conta",
-    "status": "up",
+    "status": "down",
     "uptime": "100.00%",
-    "uptimeDay": "100.00%",
+    "uptimeDay": "99.97%",
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
-    "time": 773,
-    "timeDay": 764,
-    "timeWeek": 739,
-    "timeMonth": 773,
-    "timeYear": 773,
-    "dailyMinutesDown": {}
+    "time": 762,
+    "timeDay": 589,
+    "timeWeek": 698,
+    "timeMonth": 762,
+    "timeYear": 762,
+    "dailyMinutesDown": {
+      "2026-10-19": 0
+    }
   },
   {
     "name": "Mensagens em tempo real",
     "url": "https://www.rawlyapp.com.br/api/status/tempo-real",
     "icon": "https://icons.duckduckgo.com/ip3/www.rawlyapp.com.br.ico",
     "slug": "mensagens-em-tempo-real",
-    "status": "up",
+    "status": "down",
     "uptime": "100.00%",
-    "uptimeDay": "100.00%",
+    "uptimeDay": "99.99%",
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
-    "time": 422,
-    "timeDay": 398,
-    "timeWeek": 437,
-    "timeMonth": 422,
-    "timeYear": 422,
-    "dailyMinutesDown": {}
+    "time": 421,
+    "timeDay": 392,
+    "timeWeek": 431,
+    "timeMonth": 421,
+    "timeYear": 421,
+    "dailyMinutesDown": {
+      "2026-10-19": 0
+    }
   },
   {
     "name": "Chamadas de voz e tela",
